@@ -19,3 +19,62 @@ body {
     font-family: 'Raleway', 'sans-serif';
     background: #fff;
 }
+
+
+/* estilos globales */
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+hr {
+    width: 95vh;
+    margin: 0 auto;
+}
+
+/* Estilos al header  */
+
+.navegacion__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: #3b83bd;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.navegacion__header .fas {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* interaccion con JavaScript */
+
+.navegacion__times-btn {
+    display: none;
+}
+
+.navegacion__barra{
+    background: #333;
+    /* height: 0;
+    overflow: hidden; */
+}
+
+.navegacion__barra-mostrar {
+    height: auto;
+}
+
+/* Fin de interaccion con JavaScript */
+
+

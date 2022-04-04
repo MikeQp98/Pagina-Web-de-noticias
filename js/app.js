@@ -26,18 +26,14 @@ const ENTERTAINMENT__NEWS = "https://newsapi.org/v2/top-headlines?country=Ve&cat
 
 
 generalbtn.addEventListener("click", function(){
-
     fetchGeneralNews();
-
 })
 
 sportsBtn.addEventListener("click", function(){
-    
     fetchSportsNews();
 })
 
 businessBtn.addEventListener("click", function(){
-    
     fetchBusinessNews();
 })
 
@@ -59,6 +55,7 @@ const fetchGeneralNews = async () => {
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
+        console.log(myJson);
     } else {
         // handle errors
         console.log(response.status, response.statusText);
@@ -74,6 +71,7 @@ const fetchSportsNews = async () => {
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
+        console.log(myJson);
     } else {
         // handle errors
         console.log(response.status, response.statusText);
@@ -89,6 +87,7 @@ const fetchBusinessNews = async () => {
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
+        console.log(myJson);
     } else {
         // handle errors
         console.log(response.status, response.statusText);
@@ -104,6 +103,7 @@ const fetchTechnologyNews = async () => {
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
+        console.log(myJson);
     } else {
         // handle errors
         console.log(response.status, response.statusText);
@@ -119,6 +119,7 @@ const fetchEntertainmentNews = async () => {
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles;
+        console.log(myJson);
     } else {
         // handle errors
         console.log(response.status, response.statusText);
@@ -126,4 +127,18 @@ const fetchEntertainmentNews = async () => {
         return;
     }
     displayNews();
+}
+
+const fetchQueryNews = async () => {
+    
+    const response = await fetch (SEARCH__NEWS+newsQuery.value+"&apikey="+API_KEY)
+    newsDataArr = [];
+    if (response.status >= 200 && response.status < 300) {
+        const myJson = await response.json();
+        console.log(myJson);
+    }else {
+        //error
+    }
+
+    displayNews()
 }

@@ -1,95 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Noticias</title>
-     <!-- Agregas los estilos -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <!-- Agregas las fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <div class="navegacion__contenedor">
-            <div class="navegacion__header">
-                <div class="navegacion__titulo">
-                    <h1>Noticias 24 Horas</h1>
+
+    <title>Noticias 24 horas</title>
+  </head>
+  
+  
+  <body class="m-0 p-0">
+            <div class="container-fluid">
+
+                <!-- Barra de Navegacion -->
+                <div>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                          <a class="navbar-brand text-warning" href="#">Noticias24Horas</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Deportes</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Economía</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Tecnología</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Espectaculo</a>
+                              </li>
+                            </ul>
+                            <form class="d-flex">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                          </div>
+                        </div>
+                      </nav>
                 </div>
 
-                <!-- Apertura de Iconos  -->
-                    <div class="navegacion__ham-btn">
-                        <span>
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </div>
+                 <!-- noticias -->
+                 <div></div>
 
-                    <div class="navegacion__times-btn">
-                        <span>
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </div>
-                </div>
-            <!-- cierre de Iconos -->
+                 <!-- footer -->
+                 <div></div>
 
-            <!-- Barra de Navegacion -->
-                <div class="navegacion__barra" id="nav-bar">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Current Affairs</a></li>
-                            <li><a href="#">Archive</a></li>
-                            <li><a href="#">Featured</a></li>
-                            <li><a href="#">Broadcast</a></li>
-                            <li><a href="#">Inicio</a></li>
-                        </ul>
-                    </nav>
-                </div>
 
-             <!-- Fin de Barra de Navegacion -->
 
-               <!-- Apertura de Iconos Social Media -->
-
-            <div class="navegacion__social-icons">
-                <div class = "social-icons">
-                    <ul>
-                        <li>
-                            <a href= "#"><i class = "fab fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href= "#"><i class = "fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href= "#"><i class = "fab fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href= "#"><i class = "fab fa-youtube"></i></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
 
 
-
-
-        </div>
-    </header>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+   
+   
+   
     <script src="js/app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+   
+  </body>
 </html>

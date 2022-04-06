@@ -5,6 +5,7 @@ const sportsBtn = document.getElementById("deportes");
 const businessBtn = document.getElementById("economia");
 const technologyBtn  = document.getElementById("tecnologia");
 const entertainmentBtn = document.getElementById("espectaculo");
+const healthBtn = document.getElementById("salud");
 const searchBtn = document.getElementById("buscar");
 const newsQuery = document.getElementById("newsQuery")
 const newsType = document.getElementById("newsType")
@@ -21,6 +22,7 @@ const BUSSINESS__NEWS = "https://newsapi.org/v2/top-headlines?country=mx&categor
 const SPORTS__NEWS = "https://newsapi.org/v2/top-headlines?country=ve&category=sports&apiKey=79d30bd83c1347bd90ca5fd369393324";
 const TECHNOLOGY__NEWS = "https://newsapi.org/v2/top-headlines?country=mx&category=technology&apiKey=79d30bd83c1347bd90ca5fd369393324";
 const ENTERTAINMENT__NEWS = "https://newsapi.org/v2/top-headlines?country=ve&category=entertainment&apiKey=79d30bd83c1347bd90ca5fd369393324";
+const HEALTH__NEWS = "https://newsapi.org/v2/top-headlines?country=ve&category=health&apiKey=79d30bd83c1347bd90ca5fd369393324";
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q="
 
 window.onload = function() {
@@ -53,6 +55,11 @@ technologyBtn.addEventListener("click", function(){
 entertainmentBtn.addEventListener("click", function(){
     newsType.innerHTML="<h4>Las noticias del espectaculo más destacado</h4>";
     fetchEntertainmentNews();
+})
+
+healthBtn.addEventListener("click", function(){
+    newsType.innerHTML="<h4>Las noticias sobre la  Salud más destacado</h4>";
+    fetchHealthNews();
 })
 
 searchBtn.addEventListener("click", function(){
@@ -142,6 +149,22 @@ const fetchTechnologyNews = async () => {
 
 const fetchEntertainmentNews = async () => {
     const response = await fetch(ENTERTAINMENT__NEWS);
+    newsDataArr = [];
+    if(response.status >=200 && response.status < 300) {
+        const myJson = await response.json();
+        newsDataArr = myJson.articles;
+        console.log(myJson);
+    } else {
+        // handle errors
+        console.log(response.status, response.statusText);
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
+        return;
+    }
+    displayNews();
+}
+
+const fetchHealthNews = async () => {
+    const response = await fetch(HEALTH__NEWS);
     newsDataArr = [];
     if(response.status >=200 && response.status < 300) {
         const myJson = await response.json();

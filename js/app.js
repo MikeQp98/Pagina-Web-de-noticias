@@ -24,7 +24,7 @@ const ENTERTAINMENT__NEWS = "https://newsapi.org/v2/top-headlines?country=ve&cat
 const SEARCH_NEWS = "https://newsapi.org/v2/everything?q="
 
 window.onload = function() {
-    newsType.innerHTML="<h4>Headlines</h4>";
+    newsType.innerHTML="<h4>Títulares</h4>";
     fetchHeadlines();
 };
 
@@ -69,7 +69,7 @@ const fetchHeadlines = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
 
@@ -86,7 +86,7 @@ const fetchGeneralNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
     displayNews();
@@ -102,7 +102,7 @@ const fetchSportsNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
     displayNews();
@@ -118,7 +118,7 @@ const fetchBusinessNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
     displayNews();
@@ -134,7 +134,7 @@ const fetchTechnologyNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
     displayNews();
@@ -150,7 +150,7 @@ const fetchEntertainmentNews = async () => {
     } else {
         // handle errors
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
     displayNews();
@@ -168,7 +168,7 @@ const fetchQueryNews = async () => {
         console.log(myJson);
     }else {
         console.log(response.status, response.statusText);
-        newsdetails.innerHTML = "<h5>No data found.</h5>"
+        newsdetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>"
         return;
     }
 
@@ -181,7 +181,7 @@ function displayNews() {
    newsDetails.innerHTML = "";
    
     if (newsDataArr == 0) {
-        newsDetails.innerHTML = "<h5>No se encontraron Resultados</h5>";
+        newsDetails.innerHTML = "<h5>Lastimosamente no se encontraron Resultados</h5>";
         return;
     }
 
